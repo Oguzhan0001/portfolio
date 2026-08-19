@@ -10,7 +10,7 @@ const PROJECT_DATA = [
     title: "Klauz",
     type: "SaaS Platform",
     year: "2026",
-    brief: "AI destekli sözleşme risk analiz platformu. PDF veya Word sözleşme yükleyin, yapay zeka her maddeyi inceleyip risk raporu oluştursun. Sözleşme oluşturma ve versiyon karşılaştırma özellikleriyle birlikte.",
+    brief: "AI destekli sözleşme platformu. Sözleşmelerinizi analiz edin, sıfırdan profesyonel sözleşmeler oluşturun ve iki versiyon arasındaki farkları karşılaştırın — hepsi tek bir yerden.",
     stack: ["Next.js", "TypeScript", "Supabase", "Lemon Squeezy", "DeepSeek"],
     brandColor: "#1a1a2e",
     brandLight: "#E8E5FF",
@@ -197,7 +197,7 @@ export default function PortfolioPage() {
         <div style={{ padding: 32, borderRadius: 10, border: "1px solid #E5E7EB" }}>
           <h2 style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9CA3AF", fontFamily: mono, marginBottom: 16 }}>Hakkımda</h2>
           <p style={{ fontSize: 15, color: "#374151", lineHeight: 1.75, marginBottom: 12 }}>
-            Full-stack web geliştirme alanında çalışıyorum. Klauz&apos;u — AI destekli bir sözleşme analiz platformunu — sıfırdan tasarlayıp geliştirdim. Next.js, Supabase, Lemon Squeezy ödeme entegrasyonu ve DeepSeek API ile çalışan, gerçek kullanıcılara hizmet veren bir SaaS ürünü.
+            Full-stack web geliştirme alanında çalışıyorum. Klauz&apos;u — AI destekli bir sözleşme platformunu — sıfırdan tasarlayıp geliştirdim. Sözleşme analizi, oluşturma ve karşılaştırma özelliklerini tek çatı altında toplayan bir SaaS ürünü. Next.js, Supabase, Lemon Squeezy ödeme entegrasyonu ve DeepSeek API ile çalışan, gerçek kullanıcılara hizmet veren bir SaaS ürünü.
           </p>
           <p style={{ fontSize: 15, color: "#374151", lineHeight: 1.75 }}>
             Bir ürünü fikir aşamasından yayına almaya kadar tüm süreçte tek başıma yürütebiliyorum. Projeniz hakkında konuşmak isterseniz, yazmanız yeterli.
