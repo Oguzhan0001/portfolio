@@ -160,11 +160,11 @@ export default function PortfolioPage() {
           <h2 style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9CA3AF", fontFamily: mono, marginBottom: 32 }}>Hizmetler</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
             {[
-              { n: "Web Siteleri", d: "Kurumsal sitelerden tek sayfalık tanıtım sayfalarına kadar, SEO uyumlu ve hızlı web siteleri." },
-              { n: "E-Ticaret", d: "Shopify, WooCommerce veya headless yapıda — ölçeğinize ve bütçenize uygun online mağazalar." },
-              { n: "Web Uygulamaları", d: "SaaS platformları, yönetim panelleri, dahili araçlar. React veya Next.js ile modern çözümler." },
-              { n: "AI Entegrasyonu", d: "Mevcut iş süreçlerinize yapay zeka entegrasyonu. OpenAI, belge analizi, otomatik raporlama." },
-            ].map((s) => (
+                { n: "Web Siteleri", d: "Kurumsal sitelerden tek sayfalık tanıtım sayfalarına kadar, SEO uyumlu ve hızlı web siteleri." },
+                { n: "Web Uygulamaları", d: "SaaS platformları, yönetim panelleri, dahili araçlar. Next.js ve Supabase ile modern çözümler." },
+                { n: "AI Entegrasyonu", d: "Mevcut iş süreçlerinize yapay zeka entegrasyonu. Belge analizi, otomatik raporlama, chatbot geliştirme." },
+                { n: "Landing Page", d: "Ürün ve hizmet tanıtımları için dönüşüm odaklı, mobil uyumlu tek sayfa tasarımları." },
+              ].map((s) => (
               <div key={s.n} style={{ padding: "20px 0", borderTop: "2px solid #0F0F0F" }}>
                 <h3 style={{ fontSize: 16, fontWeight: 700, marginBottom: 8 }}>{s.n}</h3>
                 <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.6 }}>{s.d}</p>
