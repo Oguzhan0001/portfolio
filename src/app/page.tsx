@@ -11,51 +11,55 @@ const PROJECT_DATA = [
     type: "SaaS Platform",
     year: "2026",
     brief: "AI destekli sözleşme risk analiz platformu. PDF veya Word sözleşme yükleyin, yapay zeka her maddeyi inceleyip risk raporu oluştursun. Sözleşme oluşturma ve versiyon karşılaştırma özellikleriyle birlikte.",
-    stack: ["Next.js", "TypeScript", "Supabase", "Stripe", "OpenAI"],
+    stack: ["Next.js", "TypeScript", "Supabase", "Lemon Squeezy", "DeepSeek"],
     brandColor: "#1a1a2e",
     brandLight: "#E8E5FF",
     brandMid: "#6366F1",
     mockup: "saas" as const,
     liveUrl: "https://klauz.app",
+    badge: "YAYINDA",
   },
   {
     id: "meridian",
     title: "Meridian Coffee",
     type: "E-Ticaret",
     year: "2024",
-    brief: "Butik kahve markası için online mağaza. Özel abonelik sistemi, ürün filtreleme ve interaktif demleme rehberi. Lansmandan sonra dönüşüm oranı %34 arttı.",
+    brief: "Butik kahve markası için tasarlanan online mağaza konsepti. Abonelik sistemi, ürün filtreleme ve interaktif demleme rehberi içeriyor.",
     stack: ["Next.js", "Stripe", "Sanity CMS"],
     brandColor: "#1B4332",
     brandLight: "#D8F3DC",
     brandMid: "#2D6A4F",
     mockup: "ecommerce" as const,
     liveUrl: null,
+    badge: "KONSEPT",
   },
   {
     id: "atlas",
     title: "Atlas Logistics",
     type: "Dashboard",
     year: "2024",
-    brief: "200+ araçlık filo yönetim paneli. Gerçek zamanlı takip, rota optimizasyonu, sürücü planlama ve otomatik rapor oluşturma.",
+    brief: "Filo yönetim paneli konsepti. Gerçek zamanlı araç takibi, rota optimizasyonu, sürücü planlama ve otomatik rapor oluşturma arayüzü.",
     stack: ["React", "Node.js", "PostgreSQL", "Mapbox"],
     brandColor: "#1E3A5F",
     brandLight: "#DBEAFE",
     brandMid: "#3B82F6",
     mockup: "dashboard" as const,
     liveUrl: null,
+    badge: "KONSEPT",
   },
   {
     id: "nora",
     title: "Nora Wellness",
     type: "Landing Page",
     year: "2023",
-    brief: "Sağlık uygulaması için dönüşüm odaklı tanıtım sitesi. Üç farklı hero varyantı A/B test edildi, ilk ayda %12 kayıt oranına ulaşıldı.",
+    brief: "Sağlık uygulaması için tasarlanan dönüşüm odaklı tanıtım sitesi konsepti. Mobil uygulama mockup'ı ve kullanıcı kazanım akışı içeriyor.",
     stack: ["Astro", "Tailwind CSS", "Vercel Analytics"],
     brandColor: "#7C2D12",
     brandLight: "#FFEDD5",
     brandMid: "#EA580C",
     mockup: "landing" as const,
     liveUrl: null,
+    badge: "KONSEPT",
   },
 ];
 
@@ -84,7 +88,7 @@ export default function PortfolioPage() {
           İşinizi büyütecek web siteleri geliştiriyorum.
         </h1>
         <p style={{ fontSize: 16, color: "#4B5563", maxWidth: 520, marginTop: 16, lineHeight: 1.7 }}>
-          İstanbul merkezli full-stack web geliştirici. Fikrinizi çalışan bir ürüne dönüştürüyorum  hızlı, modern ve kullanıcı dostu.
+          İstanbul merkezli full-stack web geliştirici. Fikrinizi çalışan bir ürüne dönüştürüyorum — hızlı, modern ve kullanıcı dostu.
         </p>
         <div style={{ display: "flex", gap: 12, marginTop: 28, flexWrap: "wrap" }}>
           <a href="#iletisim" style={{ display: "inline-flex", alignItems: "center", padding: "10px 22px", background: "#0F0F0F", color: "#fff", fontSize: 14, fontWeight: 600, borderRadius: 6, textDecoration: "none" }}>Proje Başlat</a>
@@ -128,9 +132,13 @@ export default function PortfolioPage() {
                   <div>
                     <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                       <h3 style={{ fontSize: 20, fontWeight: 700, letterSpacing: "-0.02em" }}>{project.title}</h3>
-                      {isExternal && (
-                        <span style={{ fontSize: 10, fontWeight: 600, padding: "2px 8px", borderRadius: 4, background: "#ECFDF5", color: "#059669", fontFamily: mono }}>YAYINDA</span>
-                      )}
+                      <span style={{
+                        fontSize: 10, fontWeight: 600, padding: "2px 8px", borderRadius: 4, fontFamily: mono,
+                        background: project.badge === "YAYINDA" ? "#ECFDF5" : "#F3F4F6",
+                        color: project.badge === "YAYINDA" ? "#059669" : "#6B7280",
+                      }}>
+                        {project.badge}
+                      </span>
                     </div>
                     <div style={{ display: "flex", gap: 8, alignItems: "center", marginTop: 4 }}>
                       <span style={{ fontSize: 12, fontFamily: mono, color: "#6B7280" }}>{project.type}</span>
@@ -160,11 +168,11 @@ export default function PortfolioPage() {
           <h2 style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9CA3AF", fontFamily: mono, marginBottom: 32 }}>Hizmetler</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
             {[
-                { n: "Web Siteleri", d: "Kurumsal sitelerden tek sayfalık tanıtım sayfalarına kadar, SEO uyumlu ve hızlı web siteleri." },
-                { n: "Web Uygulamaları", d: "SaaS platformları, yönetim panelleri, dahili araçlar. Next.js ve Supabase ile modern çözümler." },
-                { n: "AI Entegrasyonu", d: "Mevcut iş süreçlerinize yapay zeka entegrasyonu. Belge analizi, otomatik raporlama, chatbot geliştirme." },
-                { n: "Landing Page", d: "Ürün ve hizmet tanıtımları için dönüşüm odaklı, mobil uyumlu tek sayfa tasarımları." },
-              ].map((s) => (
+              { n: "Web Siteleri", d: "Kurumsal sitelerden tek sayfalık tanıtım sayfalarına kadar, SEO uyumlu ve hızlı web siteleri." },
+              { n: "Web Uygulamaları", d: "SaaS platformları, yönetim panelleri, dahili araçlar. Next.js ve Supabase ile modern çözümler." },
+              { n: "AI Entegrasyonu", d: "Mevcut iş süreçlerinize yapay zeka entegrasyonu. Belge analizi, otomatik raporlama, chatbot geliştirme." },
+              { n: "Landing Page", d: "Ürün ve hizmet tanıtımları için dönüşüm odaklı, mobil uyumlu tek sayfa tasarımları." },
+            ].map((s) => (
               <div key={s.n} style={{ padding: "20px 0", borderTop: "2px solid #0F0F0F" }}>
                 <h3 style={{ fontSize: 16, fontWeight: 700, marginBottom: 8 }}>{s.n}</h3>
                 <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.6 }}>{s.d}</p>
@@ -178,7 +186,7 @@ export default function PortfolioPage() {
       <section style={{ maxWidth: 900, margin: "0 auto", padding: "56px 24px" }}>
         <h2 style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9CA3AF", fontFamily: mono, marginBottom: 24 }}>Teknolojiler</h2>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          {["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Sentry", "Lemon Squeezy", "OpenAI API", "DeepSeek API", "PostCSS", "Vercel", "Node.js", "Git"].map((t) => (
+          {["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Sentry", "Lemon Squeezy", "DeepSeek API", "PostCSS", "Vercel", "Node.js", "Git"].map((t) => (
             <span key={t} style={{ fontSize: 13, fontWeight: 500, padding: "7px 16px", borderRadius: 6, border: "1px solid #E5E7EB", color: "#374151" }}>{t}</span>
           ))}
         </div>
@@ -189,7 +197,7 @@ export default function PortfolioPage() {
         <div style={{ padding: 32, borderRadius: 10, border: "1px solid #E5E7EB" }}>
           <h2 style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9CA3AF", fontFamily: mono, marginBottom: 16 }}>Hakkımda</h2>
           <p style={{ fontSize: 15, color: "#374151", lineHeight: 1.75, marginBottom: 12 }}>
-            Full-stack web geliştirme alanında çalışıyorum. İlk büyük projemde Klauz&apos;u — AI destekli bir sözleşme analiz platformunu — sıfırdan tasarlayıp geliştirdim. Next.js, Supabase, Lemon Squeezy ödeme entegrasyonu ve DeepSeek API ile çalışan, gerçek kullanıcılara hizmet veren bir SaaS ürünü.
+            Full-stack web geliştirme alanında çalışıyorum. Klauz&apos;u — AI destekli bir sözleşme analiz platformunu — sıfırdan tasarlayıp geliştirdim. Next.js, Supabase, Lemon Squeezy ödeme entegrasyonu ve DeepSeek API ile çalışan, gerçek kullanıcılara hizmet veren bir SaaS ürünü.
           </p>
           <p style={{ fontSize: 15, color: "#374151", lineHeight: 1.75 }}>
             Bir ürünü fikir aşamasından yayına almaya kadar tüm süreçte tek başıma yürütebiliyorum. Projeniz hakkında konuşmak isterseniz, yazmanız yeterli.
