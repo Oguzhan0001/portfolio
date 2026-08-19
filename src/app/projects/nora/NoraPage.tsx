@@ -21,28 +21,28 @@ export default function NoraPage() {
           <span style={{ fontSize: 18, fontWeight: 800 }}>nora</span>
         </div>
         <div style={{ display: "flex", gap: 20, fontSize: 13, color: olive, fontWeight: 500, alignItems: "center" }}>
-          <a href="#" style={{ color: "inherit", textDecoration: "none" }}>Features</a>
-          <a href="#" style={{ color: "inherit", textDecoration: "none" }}>Science</a>
-          <button style={{ padding: "8px 20px", background: sage, color: "#fff", fontSize: 13, fontWeight: 700, border: "none", borderRadius: 20, cursor: "pointer" }}>Download</button>
+          <a href="#" style={{ color: "inherit", textDecoration: "none" }}>Özellikler</a>
+          <a href="#" style={{ color: "inherit", textDecoration: "none" }}>Bilim</a>
+          <button style={{ padding: "8px 20px", background: sage, color: "#fff", fontSize: 13, fontWeight: 700, border: "none", borderRadius: 20, cursor: "pointer" }}>İndir</button>
         </div>
       </nav>
 
       <section style={{ maxWidth: 960, margin: "0 auto", padding: "48px 24px 56px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, alignItems: "center" }}>
         <div>
-          <div style={{ display: "inline-block", padding: "5px 12px", borderRadius: 14, background: bgMint, fontSize: 12, fontWeight: 600, color: sage, marginBottom: 16 }}>#1 Wellness App in Turkey</div>
-          <h1 style={{ fontSize: "clamp(30px, 5vw, 46px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-0.035em" }}>Feel better.<br /><span style={{ color: sage }}>Know why.</span></h1>
-          <p style={{ fontSize: 15, color: olive, lineHeight: 1.7, marginTop: 16, maxWidth: 400 }}>Nora tracks sleep, movement, and stress — then shows you exactly what&apos;s working and what isn&apos;t. No guesswork, no guilt.</p>
+          <div style={{ display: "inline-block", padding: "5px 12px", borderRadius: 14, background: bgMint, fontSize: 12, fontWeight: 600, color: sage, marginBottom: 16 }}>Türkiye&apos;nin 1 Numaralı Sağlık Uygulaması</div>
+          <h1 style={{ fontSize: "clamp(30px, 5vw, 46px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-0.035em" }}>Daha iyi hisset.<br /><span style={{ color: sage }}>Nedenini bil.</span></h1>
+          <p style={{ fontSize: 15, color: olive, lineHeight: 1.7, marginTop: 16, maxWidth: 400 }}>Nora uyku, hareket ve stresi takip eder — sonra neyin işe yarayıp neyin yaramadığını gösterir. Tahmin yok, suçluluk yok.</p>
           <div style={{ display: "flex", gap: 12, marginTop: 28, alignItems: "center" }}>
-            <button style={{ padding: "13px 28px", background: sage, color: "#fff", fontSize: 14, fontWeight: 700, border: "none", borderRadius: 24, cursor: "pointer" }}>Download Free</button>
-            <span style={{ fontSize: 12, color: "#9CA3AF" }}>iOS & Android</span>
+            <button style={{ padding: "13px 28px", background: sage, color: "#fff", fontSize: 14, fontWeight: 700, border: "none", borderRadius: 24, cursor: "pointer" }}>Ücretsiz İndir</button>
+            <span style={{ fontSize: 12, color: "#9CA3AF" }}>iOS ve Android</span>
           </div>
           <div style={{ display: "flex", gap: 4, marginTop: 24, alignItems: "center" }}>
             {[1, 2, 3, 4, 5].map((i) => <span key={i} style={{ color: "#F59E0B", fontSize: 14 }}>★</span>)}
-            <span style={{ fontSize: 12, color: olive, marginLeft: 6 }}>4.8 · 12K+ reviews</span>
+            <span style={{ fontSize: 12, color: olive, marginLeft: 6 }}>4.8 · 12.000+ değerlendirme</span>
           </div>
         </div>
 
-        {/* Phone Mockup */}
+        {/* Telefon Mockup */}
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ width: 200, height: 400, borderRadius: 28, background: "#1A1A2E", border: "3px solid #2A2A40", padding: "12px 10px", boxShadow: "0 20px 50px rgba(0,0,0,0.12)" }}>
             <div style={{ width: 80, height: 18, borderRadius: 10, background: "#1A1A2E", margin: "-2px auto 8px", border: "3px solid #2A2A40" }} />
@@ -52,16 +52,16 @@ export default function NoraPage() {
                 <div style={{ width: 12, height: 6, borderRadius: 2, background: olive }} />
               </div>
               <div style={{ padding: "16px 16px 12px" }}>
-                <div style={{ fontSize: 11, color: olive }}>Good morning</div>
+                <div style={{ fontSize: 11, color: olive }}>Günaydın</div>
                 <div style={{ fontSize: 18, fontWeight: 700, color: "#1A1A2E" }}>Ayşe</div>
               </div>
               <div style={{ margin: "0 14px", padding: 14, borderRadius: 14, background: sage, color: "#fff" }}>
-                <div style={{ fontSize: 9, opacity: 0.7, textTransform: "uppercase", letterSpacing: "0.1em" }}>Wellness Score</div>
+                <div style={{ fontSize: 9, opacity: 0.7, textTransform: "uppercase", letterSpacing: "0.1em" }}>Sağlık Puanı</div>
                 <div style={{ fontSize: 32, fontWeight: 800, marginTop: 2 }}>84</div>
-                <div style={{ fontSize: 10, opacity: 0.8, marginTop: 6 }}>↑ 12 pts from last week</div>
+                <div style={{ fontSize: 10, opacity: 0.8, marginTop: 6 }}>↑ Geçen haftaya göre 12 puan</div>
               </div>
               <div style={{ display: "flex", gap: 8, padding: "12px 14px", flex: 1 }}>
-                {[{ l: "Sleep", v: "7h 42m", c: "#6366F1" }, { l: "Steps", v: "6,240", c: "#F59E0B" }].map((c) => (
+                {[{ l: "Uyku", v: "7sa 42dk", c: "#6366F1" }, { l: "Adım", v: "6.240", c: "#F59E0B" }].map((c) => (
                   <div key={c.l} style={{ flex: 1, padding: 10, borderRadius: 12, background: "#fff", border: "1px solid #E5E7EB" }}>
                     <div style={{ width: 6, height: 6, borderRadius: 3, background: c.c, marginBottom: 6 }} />
                     <div style={{ fontSize: 8, color: olive }}>{c.l}</div>
@@ -77,15 +77,15 @@ export default function NoraPage() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Faydalar */}
       <section style={{ maxWidth: 960, margin: "0 auto", padding: "40px 24px 64px" }}>
-        <h2 style={{ fontSize: 28, fontWeight: 800, letterSpacing: "-0.03em", marginBottom: 8, textAlign: "center" }}>Three things that actually matter.</h2>
-        <p style={{ fontSize: 14, color: olive, textAlign: "center", marginBottom: 44, maxWidth: 460, marginLeft: "auto", marginRight: "auto" }}>We deliberately left out calorie counting, weight tracking, and anything that makes you feel worse.</p>
+        <h2 style={{ fontSize: 28, fontWeight: 800, letterSpacing: "-0.03em", marginBottom: 8, textAlign: "center" }}>Gerçekten önemli olan üç şey.</h2>
+        <p style={{ fontSize: 14, color: olive, textAlign: "center", marginBottom: 44, maxWidth: 460, marginLeft: "auto", marginRight: "auto" }}>Kalori sayımı, kilo takibi ve sizi kendiniz hakkında kötü hissettiren her şeyi bilinçli olarak dışarıda bıraktık.</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
           {[
-            { t: "Sleep better", d: "Guided wind-down routines and smart alarm that wakes you in your lightest sleep phase.", m: "47 more minutes of deep sleep per night." },
-            { t: "Move more", d: "Short, adaptive workouts that fit your energy level. 5 minutes or 45.", m: "82% exercise more consistently after 30 days." },
-            { t: "Stress less", d: "Breathing exercises and journaling prompts backed by clinical research.", m: "Stress levels drop 31% in two weeks." },
+            { t: "Daha iyi uyu", d: "Uyku öncesi yatıştırma rutinleri ve sizi en hafif uyku evrenizde uyandıran akıllı alarm.", m: "Kullanıcılar her gece ortalama 47 dakika daha derin uyuyor." },
+            { t: "Daha çok hareket et", d: "Enerji seviyenize uyum sağlayan kısa egzersizler. 5 dakika ya da 45 — her sabah siz seçin.", m: "Kullanıcıların %82'si 30 gün sonra daha düzenli egzersiz yapıyor." },
+            { t: "Daha az stres", d: "Klinik araştırmalarla desteklenen nefes egzersizleri ve günlük yazma önerileri.", m: "İlk iki haftada stres seviyeleri %31 düşüyor." },
           ].map((b, i) => (
             <div key={b.t} style={{ padding: 24, borderRadius: 16, background: i === 0 ? sage : "#fff", color: i === 0 ? "#fff" : "#1A1A2E", border: i === 0 ? "none" : "1px solid #E8E4DF" }}>
               <h3 style={{ fontSize: 18, fontWeight: 800, marginBottom: 8 }}>{b.t}</h3>
@@ -96,12 +96,12 @@ export default function NoraPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Yorumlar */}
       <section style={{ maxWidth: 960, margin: "0 auto", padding: "0 24px 56px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
           {[
-            { t: "I've tried every wellness app. This is the first one I actually opened on day 30.", n: "Ayşe K.", r: "Product Designer" },
-            { t: "The sleep tracking alone is worth it. I finally understand why some mornings feel worse.", n: "Can M.", r: "Software Engineer" },
+            { t: "Her sağlık uygulamasını denedim. Bu, 30. günde de açtığım ilk uygulama.", n: "Ayşe K.", r: "Ürün Tasarımcısı" },
+            { t: "Sadece uyku takibi bile buna değer. Neden bazı sabahlar daha kötü hissettiğimi sonunda anlıyorum.", n: "Can M.", r: "Yazılım Mühendisi" },
           ].map((t) => (
             <div key={t.n} style={{ padding: 28, borderRadius: 16, border: "1px solid #E8E4DF", background: "#fff" }}>
               <div style={{ display: "flex", gap: 3, marginBottom: 14 }}>{[1, 2, 3, 4, 5].map((i) => <span key={i} style={{ color: "#F59E0B", fontSize: 12 }}>★</span>)}</div>
@@ -117,16 +117,16 @@ export default function NoraPage() {
       <section style={{ maxWidth: 960, margin: "0 auto", padding: "0 24px 64px" }}>
         <div style={{ borderRadius: 20, background: sage, padding: "56px 32px", textAlign: "center", color: "#fff", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", top: -40, right: -40, width: 160, height: 160, borderRadius: 80, background: "rgba(255,255,255,0.06)" }} />
-          <h2 style={{ fontSize: 32, fontWeight: 800, marginBottom: 12, position: "relative" }}>Start feeling better this week.</h2>
-          <p style={{ fontSize: 14, opacity: 0.8, maxWidth: 380, margin: "0 auto 28px", position: "relative" }}>Free for 30 days. Cancel anytime. Your data stays yours.</p>
-          <button style={{ padding: "14px 36px", background: "#fff", color: sage, fontSize: 15, fontWeight: 800, border: "none", borderRadius: 24, cursor: "pointer", position: "relative" }}>Download Nora Free</button>
+          <h2 style={{ fontSize: 32, fontWeight: 800, marginBottom: 12, position: "relative" }}>Bu hafta daha iyi hissetmeye başlayın.</h2>
+          <p style={{ fontSize: 14, opacity: 0.8, maxWidth: 380, margin: "0 auto 28px", position: "relative" }}>İlk 30 gün ücretsiz. İstediğiniz zaman iptal edin. Verileriniz sizin kalır.</p>
+          <button style={{ padding: "14px 36px", background: "#fff", color: sage, fontSize: 15, fontWeight: 800, border: "none", borderRadius: 24, cursor: "pointer", position: "relative" }}>Nora&apos;yı Ücretsiz İndir</button>
         </div>
       </section>
 
       <footer style={{ maxWidth: 960, margin: "0 auto", padding: "24px", borderTop: "1px solid #E8E4DF", display: "flex", justifyContent: "space-between", fontSize: 12, color: "#9CA3AF" }}>
-        <span>© 2024 Nora Health Inc.</span>
+        <span>© 2024 Nora Sağlık A.Ş.</span>
         <div style={{ display: "flex", gap: 16 }}>
-          <a href="#" style={{ color: "inherit", textDecoration: "none" }}>Privacy</a>
+          <a href="#" style={{ color: "inherit", textDecoration: "none" }}>Gizlilik</a>
           <a href="#" style={{ color: "inherit", textDecoration: "none" }}>Instagram</a>
         </div>
       </footer>
