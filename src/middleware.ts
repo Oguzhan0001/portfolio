@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const country = request.headers.get("x-vercel-ip-country") || "TR";
+  const country = request.headers.get("x-vercel-ip-country") || "EN";
   const locale = country === "TR" ? "tr" : "en";
 
   const response = NextResponse.next();
