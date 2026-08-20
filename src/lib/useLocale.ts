@@ -8,10 +8,10 @@ export function useLocale() {
   const [locale, setLocale] = useState<Locale>("en");
 
   useEffect(() => {
-    const match = document.cookie.match(/locale=(tr|en)/);
-    if (match) {
-      setLocale(match[1] as Locale);
-    }
+    fetch("/api/locale")
+      .then((res) => res.json())
+      .then((data) => setLocale(data.locale))
+      .catch(() => {});
   }, []);
 
   const toggleLocale = () => {
