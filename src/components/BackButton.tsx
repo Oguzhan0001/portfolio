@@ -1,8 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { useLocale } from "@/lib/useLocale";
+import { t } from "@/lib/translations";
 
 export default function BackButton() {
+  const { locale } = useLocale();
+  const s = t[locale];
+
   return (
     <Link
       href="/"
@@ -16,7 +21,7 @@ export default function BackButton() {
         textDecoration: "none",
       }}
     >
-      ← Portfolyo
+      {s.backButton}
     </Link>
   );
 }
