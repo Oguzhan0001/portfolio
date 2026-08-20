@@ -5,18 +5,17 @@ import { useState, useEffect } from "react";
 export type Locale = "tr" | "en";
 
 export function useLocale() {
-  const [locale, setLocale] = useState<Locale>("tr");
+  const [locale, setLocale] = useState<Locale>("en");
 
   useEffect(() => {
-    const match = document.cookie.match(/locale=(tr|en)/);
-    if (match) {
-      setLocale(match[1] as Locale);
-    }
+    const manual = document.cookie.match(/locale_manual=(tr|en)/);
+    const auto = document.cookie.match(/locale=(tr|en)/);
+    setLocale((manual?.[1] || auto?.[1] || "en") as Locale);
   }, []);
 
   const toggleLocale = () => {
     const newLocale = locale === "tr" ? "en" : "tr";
-    document.cookie = `locale=${newLocale};path=/;max-age=${60 * 60 * 24 * 30}`;
+    document.cookie = `locale_manual=${newLocale};path=/`;
     setLocale(newLocale);
   };
 
